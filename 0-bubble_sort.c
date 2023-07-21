@@ -1,27 +1,6 @@
 #include "sort.h"
 
 /**
- * print_array - Prints an array of integers
- *
- * @array: The array to be printed
- * @size: Number of elements in @array
- */
-void print_array(const int *array, size_t size)
-{
-	size_t i;
-
-	i = 0;
-	while (array && i < size)
-	{
-		if (i > 0)
-			printf(", ");
-		printf("%d", array[i]);
-		++i;
-	}
-	printf("\n");
-}
-
-/**
  * swap - swaps two elements
  * @arr: the array to be swapped
  * @i1: index 1
@@ -45,14 +24,15 @@ void swap(int *arr, int i1, int i2)
 void bubble_sort(int *array, size_t size)
 {
 	int check = 1;
+	size_t i, j;
 
 	if (array == NULL || size == 0)
 		return;
 
-	for (int j = 0; j < (size - 1); j++)
+	for (j = 0; j < (size - 1); j++)
 	{
 		check = 0;
-		for (int i = 0; i < (size - 1); i++)
+		for (i = 0; i < (size - 1); i++)
 		{
 			if (array[i] > array[i + 1])
 			{
