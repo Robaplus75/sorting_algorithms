@@ -1,2 +1,2 @@
 alx sorting algorithms project
-Weight 2
+It has Weight 2
